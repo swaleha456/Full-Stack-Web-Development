@@ -8,3 +8,4 @@
    print a message "Welcome firstName lastName to Graphic Era Family !!". 
 5. Create a script that establishes a connection with database and prints a message on 
    successful connection.
+hbjh
