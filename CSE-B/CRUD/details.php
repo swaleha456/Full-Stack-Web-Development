@@ -7,10 +7,10 @@
 <body>
 
 <?php
-$sql = "SELECT * FROM `users`";
+$sql = "SELECT * FROM `usertable`";
 $result = mysqli_query($conn, $sql);
 
-if($result->num_rows > 0){
+
 ?>   
 <table border="1">
     <thead>
@@ -39,7 +39,7 @@ if($result->num_rows > 0){
     <?php } ?>
     </tbody>
     
-<?php } ?>
+<?php  ?>
 </table>   
 </body>   
 </html>

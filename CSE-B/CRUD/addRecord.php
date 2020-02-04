@@ -11,10 +11,10 @@ if (isset($_POST['btn'])){
  $contact = $_POST['contact'];
  $email = $_POST['email']; 
     
-    $sql  = "INSERT INTO `users` (name, age, contact, email) 
+    $sql  = "INSERT INTO `usertable` (name, age, contact, email) 
     VALUES ('$username', '$age', '$contact', '$email')";
     mysqli_query($conn, $sql);
-    header("Location:details.php");
+    
 }
 else{
     echo "Welcome Guest";
