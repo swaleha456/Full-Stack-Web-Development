@@ -1,0 +1,88 @@
+
+  
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="utf-8"> 
+	<title>Guess the Number</title> 
+
+	<style> 
+		html { 
+	font-family: sans-serif; 
+	} 
+	
+		body { 
+	width: 50%; 
+	max-width: 800px; 
+	min-width: 480px; 
+	margin: 0 auto; 
+	background-color: lightblue;
+	} 
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+	</style> 
+</head> 
+
+<body> 
+<h1>Guess The Number</h1> 
+
+<p>We have selected a random number between 1 - 100. 
+See if you can guess it.</p> 
+
+<div class = "form"> 
+	<label for="guessField">Enter a guess: </label> 
+	<input type = "text" id = "guessField" class = "guessField"> 
+	<input type = "submit" value = "Submit guess"
+		class = "guessSubmit" id = "submitguess"> 
+</div> 
+
+<script type = "text/javascript"> 
+	var data= [] 
+	var y = Math.floor(Math.random() * 100 + 1); 
+	var guess = 1;
+	var guesscount = 10; 
+	
+	document.getElementById("submitguess").onclick = function(){ 	 
+var x = document.getElementById("guessField").value; 
+data.push(x);
+if(x == y) 
+{	 
+	alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+			+ guess + " GUESS " + data);
+	
+
+} 
+else if(x > y && guess < guesscount)
+{	 
+	guess++; 
+	alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+	
+} 
+else if (x < y && guess < guesscount)
+{ 
+	guess++; 
+	alert("OOPS SORRY!! TRY A GREATER NUMBER") 
+	
+} 
+else
+{
+	alert("YOU LOST!!YOUR CHANCES ARE FINISHED")
+	Redirect();
+}
+} 
+function Redirect() 
+{
+    window.location = "game.php";
+}
+</script> 
+</body> 
+</html>
+  
